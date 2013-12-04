@@ -31,11 +31,11 @@ class Employee
 
   def self.display_employees
     @employees.each do |employee|
-      puts "#{employee.name} - #{employee.class}"
+      puts "*** #{employee.name} - #{employee.class} ***"
       puts "Base Salary: $#{employee.base_salary}"
       puts "Gross Salary: $#{employee.gross_salary}"
       if employee.class == CommissionSalesPerson
-        puts "Commision: $#{employee.commission_dollars}"
+        puts "Commision Dollars: $#{employee.commission_dollars}"
       elsif employee.class == QuotaSalesPerson || employee.class == Owner
         puts "Bonus met? #{employee.bonus}"
       end

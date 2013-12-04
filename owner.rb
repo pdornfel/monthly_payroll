@@ -4,11 +4,7 @@ class Owner < Employee
   def initialize(name, base_salary, quota, bonus)
     super(name, base_salary)
     @quota = quota
-    @bonus = bonus
-  end
-
-  def monthly_pay
-    (gross_salary / 12).to_i
+    @bonus = bonus.to_i
   end
 
   def bonus
@@ -22,8 +18,14 @@ class Owner < Employee
       answer = "(yes) - $#{@bonus}"
     else
       answer = "(no)"
+      @bonus = 0
     end
     answer
+  end
+
+  def monthly_pay
+    data = gross_salary + @bonus
+    data / 12
   end
 
 end

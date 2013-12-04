@@ -14,12 +14,14 @@ class QuotaSalesPerson < Employee
       answer = "(yes) - $#{@bonus}"
     else
       answer = "(no)"
+      @bonus = 0
     end
     answer
   end
 
 
   def monthly_pay
-    (gross_salary + @bonus / 12).to_i
+    data = gross_salary + @bonus
+    data / 12
   end
 end

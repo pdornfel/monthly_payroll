@@ -10,11 +10,12 @@ class CommissionSalesPerson < Employee
   def commission_dollars
     data = SalesData.monthly_sales
     sales_dollars = data[@name.split(' ')[1]]
-    (@commission_dollars = sales_dollars * @commission.to_f).to_i * Employee::TAX_RATE
+    @commission_dollars = (sales_dollars * @commission.to_f * Employee::TAX_RATE).to_i
   end
 
   def monthly_pay
-    (gross_salary + @commission_dollars / 12).to_i
+    data = (gross_salary + @commission_dollars).to_i
+    data / 12
   end
 
 end
