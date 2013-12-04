@@ -1,0 +1,7 @@
+***MONTHLY PAYROLL***
+
+As an owner I want to be able to calculate everyone net pay
+in order to pay my employees accordingly
+=> be able to display net pay for all employees
+=> read in employee and information from a CSV
+

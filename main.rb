@@ -1,0 +1,7 @@
+require 'CSV'
+require_relative 'developer'
+require_relative 'designer'
+require_relative 'commission_sales_person'
+require_relative 'quota_sales_person'
+require_relative 'owner'
+require_relative 'employee'
